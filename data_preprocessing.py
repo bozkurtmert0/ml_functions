@@ -47,6 +47,7 @@ def numerical_summary(data,numerical_col, plot = False):
     quantiles = [0.05 ,0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90] 
     print(dataframe[numerical_col].describe(quantiles).T) 
     
+    print("_________________________________________________________________________________")  
     if plot: 
         dataframe[numerical_col].hist() 
         plt.xlabel(numerical_col)
