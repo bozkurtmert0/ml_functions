@@ -24,10 +24,8 @@ def data_check(data):
     print("__________________________________________________________") 
     
     
-   #--------------------------------------------------------------------------
-  
-  def grab_columns_names(data, cat_th=10, car_th=20):  
-    
+#--------------------------------------------------------------------------
+def grab_columns_names(data, cat_th=10, car_th=20):  
     cat_cols = [col for col in data.columns if str(data[col].dtypes) in ["category","object","bool"] ] 
     #If int and float variables have less than 10 unique values, these variables are categorical
     num_but_cat = [col for col in  data.columns if data[col].nunique() < 10 and data[col].dtypes in ["int","float"]]  
