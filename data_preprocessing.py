@@ -32,7 +32,7 @@ def grab_columns_names(data, cat_th=10, car_th=20):
     #cardinal
     cat_but_car = [col for col in data.columns if data[col].nunique() > 20 and str(data[col].dtypes) in ["int","float64"]] 
     cat_cols = cat_cols + num_but_cat
-    cat_cols = [col for col in cat_cols if col not in cat_but_cat]
+    cat_cols = [col for col in cat_cols if col not in cat_but_car]
     num_cols = [col for col in data.columns if data[col].dtypes in ["int","float"]]
     num_cols = [col for col in num_cols if col not in cat_cols]
 
